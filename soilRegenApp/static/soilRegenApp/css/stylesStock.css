@@ -1,0 +1,213 @@
+
+/* CSS for the navigation bar */
+body {
+    background: white url("https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/png-transparent-organic-food-herb-organic-farming-pepper-plant-food-leaf-superfood.JPG?v=1689611332490") no-repeat;
+    background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 3px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CSS for the hero image */
+.hero-image {
+    /* background-image: url("https://www.croptracker.com/images/AdobeStock_92734782_4.10.44_PM-2.jpeg"); */
+    background-image: url("https://nofa.in/images/banner.jpg");
+    /* background-image: url("https://www.organicresearchcentre.com/wp-content/uploads/2021/01/Homepage-banner-2021.jpg"); */
+    /* background-image: url("https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/header3.jpg?v=1689810019139"); */
+    /* background-image: url("https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/header.jpg?v=1689810028125"); */
+    /* background-image: url("https://ajaybiotech.com/images/banner-blog-agriculture.jpg"); */
+    /* background-image: url("https://st4.depositphotos.com/2763558/37835/i/600/depositphotos_378351814-stock-photo-beautiful-young-asian-woman-man.jpg"); */
+    background-size: cover;
+    background-position: center;
+    height: 12rem;
+
+    width: 100%;
+
+}
+
+/* CSS for the footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.5rem;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    float: bottom;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+#main-title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#page-container{
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 2px solid purple;
+  border-collapse: collapse; */
+}
+
+#content-wrap{
+    position: relative;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: 0;
+    top: 0;
+    /* float: top; */
+    color: darkgreen;
+    font-weight: 700;
+    padding: 3px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2.5rem;
+    /* border: 2px solid blue;
+    border-collapse: collapse; */
+}
+
+#content-wrap2{
+    position: relative;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: -30%;
+    /* top:0; */
+    /* float: top; */
+    color: darkgreen;
+    font-weight: 700;
+    padding: 3px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2.5rem;
+    /* border: 2px solid blue;
+    border-collapse: collapse; */
+}
+
+#content-wrap3{
+    position: relative;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: -18%;
+    /* top:0; */
+    /* float: top; */
+    color: darkgreen;
+    font-weight: 700;
+    padding: 3px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2.5rem;
+    /* border: 2px solid blue;
+    border-collapse: collapse; */
+}
+
+
+#stock-list-div {
+    /* overflow: hidden; */
+    font-weight: 550;
+    margin: 0 auto;
+    /* float: left; */
+    /* width: fit-content; */
+    /* height: fit-content; */
+    font-size: 1.25rem;
+    /* padding: 20px; */
+    /* border: 2px solid black;
+    border-collapse: collapse; */
+    margin-bottom: 2rem;
+}
+
+#stock-detail-table-div {
+    /* overflow: hidden; */
+    margin: 0 auto;
+    font-weight: 550;
+    width:fit-content;
+    font-size: 1.25rem;
+    /* padding: 20px; */
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#stock-list-table-div {
+    /* overflow: hidden; */
+    margin: 0 auto;
+    font-weight: 550;
+    width:fit-content;
+    font-size: 1.25rem;
+    /* padding: 20px; */
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+
+.stock-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: auto;
+    width:fit-content;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    min-width: 400px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.stock-table thead {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.stock-table tr:nth-child(even) {
+    background-color: grey;
+    color: #ffffff;
+    text-align: left;
+}
+
+.stock-table th,
+.stock-table td {
+    padding: .5rem .75rem;
+}
+

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div id="content-wrap">
+    <h2>{{ analysis_item.description }}</h2> 
+    <a href="{% url 'update_analysis' item_id=analysis_item.item_id %}"><button>Update Analysis</button></a>
+    <a href="{% url 'delete_analysis' item_id=analysis_item.item_id %}"><button>Delete Analysis</button></a>
+    <br>
+    <div id="analysis-detail-table-div">
+        <table class="analysis-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Analysis</th>
+                    <th>Report Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ analysis_item.description }}</td>
+                    <td>{{ analysis_item.analysis }}</td>
+                    <td>{{ analysis_item.report_item }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

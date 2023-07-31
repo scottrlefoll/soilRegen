@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div id="content-wrap">
+    <div id="farm-detail">
+        <h2>Farm Detail</h2>
+        <p>Farm ID: {{ farm.farm_id }}</p>
+        <p>Farm Name: {{ farm.farm_name }}</p>
+        <p>Street Address: {{ farm.street_address }}</p>
+        <p>Town: {{ farm.town }}</p>
+        <p>State: {{ farm.state }}</p>
+        <p>Zip: {{ farm.zip }}</p>
+        <p>Description: {{ farm.description }}</p>
+        <p>User: {{ farm.user }}</p>
+    </div>
+    <div id="field-list">
+        <h2>Field List</h2>
+        <table class="field-table">
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Field Acres</th>
+                    <th>Soil Type</th>
+                    <th>Growing Zone</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for field in field_list %}
+                <tr>
+                    <td>{{ field.field_name }}</td>
+                    <td>{{ field.field_acres }}</td>
+                    <td>{{ field.soil_type }}</td>
+                    <td>{{ field.growing_zone }}</td>
+                    <td>{{ field.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

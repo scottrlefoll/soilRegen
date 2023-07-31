@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div id="content-wrap">
+    <h2>{{ report.field.farm.name }}</h2>
+    <a href="{% url 'update_report' %}"><button>Update Report</button></a>
+    <a href="{% url 'delete_report' %}"><button>Delete Report</button></a>
+    <p>Report Date: {{ report.report_date }}</p>
+    <p>Lab Name: {{ report.lab_name }}</p>
+    <br>
+    <div id="report-item-table-div">
+        <table class="report-item-table">
+            <thead>
+                <tr>
+                    <th>Tested Element</th>
+                    <th>Unit</th>
+                    <th>Results</th>
+                    <th>Target Ratio</th>
+                    <th>Target Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in report_items %}
+                <tr>
+                    <td>{{ item.tested_element }}</td>
+                    <td>{{ item.unit }}</td>
+                    <td>{{ item.results }}</td>
+                    <td>{{ item.target_ratio }}</td>
+                    <td>{{ item.target_level }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

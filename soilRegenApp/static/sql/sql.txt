@@ -1,0 +1,84 @@
+-- Table structure for table `users`
+--
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `clients` (
+  `clientId` int UNSIGNED NOT NULL,
+  `clientEmail` varchar(40) NOT NULL,
+  `clientPassword` varchar(255) NOT NULL,
+  `clientLevel` enum('1','2','3') NOT NULL DEFAULT '1',
+  `comment` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`clientId`);
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+ADD UNIQUE (`clientEmail`);
+--
+-- Unique for table `clients`
+--
+ALTER TABLE `clients`
+MODIFY `clientId` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- Dumping data for table `users`
+--
+INSERT INTO `users` (
+    `userEmail`,
+    `userPassword`,
+    `userLevel`
+  )
+VALUES (
+    'robwillens@gmail.com',
+    '12345*AB',
+    '3'
+  ),
+(
+    'scottlefoll@gmail.com',
+    '12345*AB',
+    '2'
+  ),
+(
+    'janedillard@gmail.com',
+    '12345*AB',
+    '1'
+  );
+
+--
+-- Dumping data for table `stocks`
+--
+INSERT INTO `stocks` (
+    `stockSymbol`,
+    `stockName`,
+    `stockPrice`,
+  )
+VALUES (
+    'META',
+    'Meta Platforms',
+    '195.61'
+  ),
+(
+    'TSLA',
+    'Tesla',
+    '180.13'
+  ),
+(
+    'AMZN',
+    'Amazon',
+    '98.95'
+  ),
+(
+    'GOOG',
+    'Alphabet',
+    '102.46'
+  ),
+(
+    'MSFT',
+    'Microsoft',
+    '279.43'
+  );
+

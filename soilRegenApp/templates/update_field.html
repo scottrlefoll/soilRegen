@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div id="content-wrap">
+    <h2>{{ field.field_name }}</h2> 
+    <a href="{% url 'update_field' field.field_id %}"><button>Update Field</button></a>
+    <a href="{% url 'delete_field' field.field_id %}"><button>Delete Field</button></a>
+    <p>Field ID: {{ field.field_id }}</p>
+    <p>Field Name: {{ field.field_name }}</p>
+    <p>Field Acres: {{ field.field_acres }}</p>
+    <p>Soil Type: {{ field.soil_type }}</p>
+    <p>Growing Zone: {{ field.growing_zone }}</p>
+    <p>Description: {{ field.description }}</p>
+    <p>Farm: {{ field.farm }}</p>
+</div>
+{% endblock %}

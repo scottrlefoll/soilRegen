@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* The grid: Four equal columns that float next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container-transfer {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+/* Expanding image text */
+#ExpandedImg {
+    left: 50;
+    width: 400;
+    height: 300;
+ }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  /* The art images */
+  .art-image {
+    /* width: 400px; */
+	width: 100%;
+	/* height: 100%; */
+	padding: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+  }
+
+  /* The art image container */
+  .art-box {
+	position: absolute;
+	width: 80%;
+	left: 20px;
+  }

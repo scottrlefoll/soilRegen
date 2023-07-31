@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div id="content-wrap">
+    <h2>User Profile</h2> 
+    <a href="{% url 'update_profile' %}"><button>Update Profile</button></a>
+    <a href="{% url 'delete_profile' %}"><button>Delete Profile</button></a>
+    <p>Street Address: {{ profile.street_address }}</p>
+    <p>Town: {{ profile.town }}</p>
+    <p>State: {{ profile.state }}</p>
+    <p>Zip: {{ profile.zip }}</p>
+    <p>Phone: {{ profile.phone }}</p>
+    <p>Notes: {{ profile.notes }}</p>
+</div>
+{% endblock %}

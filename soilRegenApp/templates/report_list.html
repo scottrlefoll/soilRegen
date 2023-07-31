@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+
+{% block content %}
+<div id="content-wrap2">
+    <div id="report-list-div">
+        <h2>User Dashboard</h2>
+        <a href="{% url 'add_report' %}"><button>Add Soil Report</button></a>
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <form method="post">
+    {% csrf_token %}
+        <div id="report-list-table-div">
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Report Date</th>
+                        <th>Lab Name</th>
+                        <th>Field</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for report in reports %}
+                    <tr>
+                        <td><a href="{% url 'report_detail' report_id=report.report_id %}">{{ report.report_id }}</a></td>
+                        <td>{{ report.report_date|date:"m/d/y" }}</td>
+                        <td>{{ report.lab_name }}</td>
+                        <td>{{ report.field }}</td>
+                        <td><a href="{% url 'delete_report' report_id=report.report_id %}">Delete</a></td>
+                        <td><a href="{% url 'update_report' report_id=report.report_id %}">Update</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+        charset="UTF-8"
+        http-equiv="X-UA-Compatible"
+        content="width=device-width, initial-scale=1.0"
+        name="viewport"
+    />
+
+    {% load static %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'soilRegenApp/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'soilRegenApp/css/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Proxima+Nova" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+
+    <!-- <script src="{% static 'soilRegenApp/js/api.js' %}" type="module"></script> -->
+    <script src="{% static 'soilRegenApp/js/jquery.keyframes.min.js' %}" type="module"></script>
+    <script src="{% static 'soilRegenApp/js/utilities.js' %}" type="module"></script>
+    <script src="{% static 'soilRegenApp/js/scripts.js' %}" type="module"></script>
+
+
+    <title>Soil Regen | Regenerative Farming Expert System | Home.</title>
+  </head>
+
+  <body >
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/6280f6037b967b11798f6fe5/1g33s1vev";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+
+    <div class="content">
+      <header>
+        <div class="navbar1">
+          <nav>
+            {% if user.is_authenticated %}
+                <ul class="navbar1-ul">
+                    <li>
+                      <div class="logo-box">
+                        <a href="index.html"
+                          ><img
+                            class="logo-image"
+                            src="https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/logo-nb.png?v=1689893428177"
+                            alt="Farming hands"
+                        /></a>
+                      </div>
+                    </li>
+                    <li><a class="nav-choice" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-choice" href="{% url 'farm_detail' farm_id=10 %}">Dashboard</a></li>
+                    <li><a class="nav-choice" href="{% url 'home' %}">About</a></li>
+                    <li><a class="nav-choice" href="{% url 'home' %}">Contact</a></li>
+                    <li><a class="nav-choice" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            {% else %}
+                 <ul class="navbar1-ul">
+                    <li>
+                      <div class="logo-box">
+                        <a href="index.html"
+                          ><img
+                            class="logo-image"
+                            src="https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/logo-nb.png?v=1689893428177"
+                            alt="Farming hands"
+                        /></a>
+                      </div>
+                    </li>
+                    <li><a class="nav-choice" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-choice" href="{% url 'login' %}">About</a></li>
+                    <li><a class="nav-choice" href="{% url 'login' %}">Contact</a></li>
+                    <li><a class="nav-choice" href="{% url 'login' %}">Login</a></li>
+                </ul>
+            {% endif %}
+
+            <h1 id="main-title" class="home-headline1">SoilRegen</h1>
+          </nav>
+        </div>
+      </header>
+
+      <main onload="displayArt()">
+        <div class="container" id="page-container">
+          <div class="banner-box">
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Croptracker"
+              src="https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/pexels-photo-1443867.jpeg?v=1689814916816"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Croptracker"
+              src="https://www.croptracker.com/images/AdobeStock_92734782_4.10.44_PM-2.jpeg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="NOFA"
+              src="https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/regenerativefarming_banner_canva-panorama-3d386c6d0ebf801055923a8a1a1e4e33-5a8351871d42d.png?v=1689814161704"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Organic Research"
+              src="https://www.organicresearchcentre.com/wp-content/uploads/2021/01/Homepage-banner-2021.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Highland"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/highland_172217011-612x612.jpg?v=1671024371660"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Header 3"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/header3.jpg?v=1689810019139"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Ajay"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/header.jpg?v=1689810028125"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Greenhouse"
+              src="https://st4.depositphotos.com/2763558/37835/i/600/depositphotos_378351814-stock-photo-beautiful-young-asian-woman-man.jpg"
+            />
+          </div>
+
+          <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {
+                myIndex = 1;
+              }
+              x[myIndex - 1].style.display = "block";
+              setTimeout(carousel, 9000);
+            }
+          </script>
+
+          <div class="home-box">
+            <p>
+              <img
+                class="circle-tips"
+                src="https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/Add%20a%20heading%205A.png?v=1653738412543"
+                alt="tips"
+                title="Quick Tips"
+              />
+            </p>
+
+            <iframe
+                src="{% static 'soilRegenApp/html/circle_menu.html' %}"
+                class="circle_menu_widget"
+                style="border: none"
+                title="Iframe Circle_Menu"
+            ></iframe>
+
+            <h2 class="home-headline1a">Organic and Regenerative Agriculture</h2>
+            <h3 class="home-headline2">Soil Health</h3>
+
+            <p class="home-paragraph1">
+              Regenerative farming is a holistic land management practice that focuses on improving 
+              soil health. The goals are to restore the soil's ability to capture water, carbon, and other nutrients, thus improving biodiversity, 
+              enhancing ecosystems, and combating climate change. This approach goes beyond sustainable agriculture by aiming not just to maintain, 
+              but to enhance soil fertility and global biodiversity. </p>
+
+            <p class="home-paragraph1">
+              For more information on regenerative farming click here: 
+              <a href="https://www.ecofarmingdaily.com/the-principles-of-regenerative-agriculture/" target="_self">regenerative farming</a>. </p>
+            <p class="home-paragraph1">
+              If you would like to read more about organic farming, click here: 
+              <a href="https://broadforkfarm.com/do-you-know-the-principles-of-organic-farming/" target="_self">organic farming</a>.</p>
+
+            <div class="home-paragraph1">
+                <h3 class="home-headline2">Regenerative Farming</h3>
+                <p>The principles of regenerative and organic farming include:</p>
+            </div>
+            <ul>
+                <li><strong>&nbsp;&nbsp;--Soil Health Improvement:</strong> Maintaining soil health through practices like cover cropping and crop rotation.</li>
+                <li><strong>&nbsp;&nbsp;--Carbon Sequestration:</strong> Healthy soil creates, absorbs and stores more nutrients.</li>
+                <li><strong>&nbsp;&nbsp;--Biodiversity Enhancement:</strong> Fostering various plant species and supporting wildlife populations.</li>
+                <li><strong>&nbsp;&nbsp;--No-Tillage:</strong> Avoid soil disturbance, which destroys soil structure and reduces beneficial soil microbiology.</li>
+                <li><strong>&nbsp;&nbsp;--Integration of Livestock:</strong> Animals contribute to soil health by cycling nutrients and stimulating plant growth.</li>
+                <li><strong>&nbsp;&nbsp;--Perennial Crops:</strong> Plants that live longer and contribute to soil health by providing continual ground cover.</li>
+            </ul><br>
+
+            <p class="home-paragraph1">
+              By prioritizing soil health, regenerative farming has the potential to create resilient farms that produce high-quality, nutrient-dense food, 
+              while also playing a crucial role in biodiversity and maintaining a healthy environment.</p>
+            <br><br><br><br><br><br><br><br>
+
+            {% block content %}
+            {% endblock %}
+
+
+            <div class="last-paragraph">
+                <br><br><br><br>
+            </div>
+
+            <footer class="social-footer">
+              <div>
+                <div class="meta">©2023 Scott LeFoll - SoilRegen</div>
+                <a href="mailto:scottlefoll@gmail.com"
+                  ><i class="meta2">scottlefoll@gmail.com</i></a
+                >
+                <iframe
+                    src="{% static 'soilRegenApp/html/social-widget.html' %}"
+                    class="social-widget"
+                    style="border: none"
+                    title="Iframe Social"
+                ></iframe>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

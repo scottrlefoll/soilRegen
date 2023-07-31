@@ -1,0 +1,25 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div id="content-wrap3">
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        <h2>Track your Fields:</h2>
+        <ul>
+            <li>Go to the Dashboard, and enter your farm, field(s), and soil reports.</li>
+            <li>Generate an expert analysis for each report.</li>
+            <li>Save and track your soil reports, and your report analyses.</li>
+        </ul>
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+        <p><a href="{% url 'password_change' %}">Change Password</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+        <p><a href="{% url 'login' %}">Log In</a>&emsp;<a href="{% url 'signup' %}">Sign Up</a></p>
+        <p><a href="{% url 'password_reset' %}">Forgot Password?</a></p>
+    {% endif %}
+</div>
+<br><br><br><br>
+{% endblock %}

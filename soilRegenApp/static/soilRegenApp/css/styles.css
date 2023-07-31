@@ -1,0 +1,662 @@
+
+/* SCSS Gradient */
+/* $gradient-top: linear-gradient(
+  0deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+);
+$gradient-radial: radial-gradient(
+  #353535ff,
+  #ffffffff,
+  #d2d7dfff,
+  #bdbbb0ff,
+  #8a897cff
+); */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*   background-color: #d2d7df; */
+    /*   background-color: #8EAC50; */
+    /*   background-color: #54B435; */
+    /*   background-color: #82CD47; */
+        background-color: #379237;
+        margin: 0;
+        padding: 0;
+        color: darkgreen;
+        font-weight: 700;
+        /* font-family: Arial, sans-serif; */
+        font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+}
+
+figcaption {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.absolute {
+  /*   position: absolute; */
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73ad21;
+}
+
+footer {
+  z-index: 97;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  /* max-width: 960px; */
+  /* margin: 0 auto; */
+  z-index: 98;
+}
+
+h1 {
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: small-caps;
+  position: fixed;
+  left: 36%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 90px;
+  top: 50px;
+}
+
+h2 {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 150%;
+}
+
+h4 {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 150%;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+/*   background-color: #AAC8A7; */
+/*   background-color: #E3F2C1; */
+/*   background-color: #F6FFDE;   */
+  background-color: #FBFFDC;
+}
+
+nav {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+/*   background-color: #d2d7df; */
+/*   background-color: #7C8DB4; */
+  background-color: #F3EFE0;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+  z-index: 96;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+/*   color: green; */
+}
+
+nav ul li {
+  /*   display: inline-block; */
+  list-style-type: none;
+/*   color: green; */
+}
+
+nav ul li a {
+/*   background-color: #d2d7df; */
+/*   background-color: #7C8DB4; */
+  background-color: #F3EFE0;
+  line-height: 3em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+nav ul li:first-child {
+  margin-right: 0;
+}
+
+nav ul li a.logo {
+/*   background-color: #d2d7df; */
+/*   background-color: #7C8DB4; */
+  background-color: #F3EFE0;
+}
+
+nav ul li a:hover {
+  background-color: #bdbbb0ff;
+  /*   #d2d7df */
+  text-decoration: underline;
+}
+
+p {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: left;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("https://fonts.googleapis.com/css2?family=Proxima+Nova"),
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Varela Round";
+  src: url("https://fonts.googleapis.com/css?family=Verela+Round"),
+    format("truetype");
+}
+
+.banner-box {
+  width: 100%;
+  height: 350px;
+}
+
+.banner-box img {
+  width: 100%;
+  height: 350px;
+}
+
+.bottom-para {
+  padding-bottom: 100;
+}
+
+.circle-tips {
+  position: fixed;
+  right: calc(50% - 600px);
+  top: 65vh;
+  width: 100px;
+  height: 50px;
+  z-index: 99;
+}
+
+.circle_menu_widget {
+    position: fixed;
+    right: calc(50% - 750px);
+    top: 50vh;
+    width: 400px;
+    height: 400px;
+    border: none;
+    z-index: 100;
+}
+
+.contact-image {
+    width: 400px;
+    height: 300px;
+}
+
+#content-wrap3{
+    position: relative;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: -18%;
+    /* top:0; */
+    /* float: top; */
+    color: darkgreen;
+    font-weight: 700;
+    padding: 3px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2.5rem;
+    /* border: 2px solid blue;
+    border-collapse: collapse; */
+}
+
+.navbar1 {
+    overflow: hidden;
+    position: fixed;
+    color: green;
+    top: 0;
+    width: 98%;
+    height: 160px;
+    max-width: 960px;
+    margin: 0 auto;
+    /* border-bottom: 5px solid brown; */
+  }
+
+.navbar1-ul {
+    list-style-type: none;
+    /* margin: 0 auto; */
+    text-align: left;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-choice {
+  color: #6C3428;
+}
+
+.nav-choice.active {
+  color: #BA704F; /* change to desired color */
+  text-decoration: underline;
+}
+
+.content {
+  padding-top: 171px;
+  /* width: 100%; */
+/*   background-color: #FFE4A7; */
+/*   background-color: #C38154; */
+  background-color: tan;
+/*     background-color: #884A39; */
+/*   background-color: #FFF9C9; */
+/*   background-color: #862B0D;   */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.home-headline1 {
+/*   color: green; */
+/*   color: #379237; */
+  color: #54B435;
+
+  /*   color: #1A5D1A */
+}
+
+.home-headline2 {
+  position: relative;
+  text-align: left;
+/*   top: 20px; */
+}
+
+.home-paragraph1 {
+  position: relative;
+  text-align: left;
+  list-style-type: disc;
+}
+
+.last-paragraph {
+    position: relative;
+    text-align: left;
+    margin-bottom: 150px;
+    padding-bottom: 150px;
+    /*   top: 100px; */
+    /*   max-width: 430px; */
+}
+
+.logo-image {
+    position: relative;
+    width: 135px;
+    height: 135px;
+    margin-left: 20px;
+    /* padding: 10px; */
+  }
+
+  .logo-box {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      /* max-width: 200px; */
+      margin: 0 auto;
+      top: -25px;
+      max-height: 150px;
+    }
+
+.home-headline1a {
+    /*   text-align: center; */
+    top: 15px;
+  }
+
+  #main-title {
+      text-align: left;
+      margin-left: -45px;
+      margin-top: -10px;
+      font-size: 5rem;
+      padding-top: 10px;
+      /* padding-bottom: 10px; */
+  }
+
+  .meta {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+.meta2 {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 300px;
+}
+
+.meta3 {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 600px;
+}
+
+.meta4 {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 700px;
+}
+
+.social-widget {
+    margin-right: 10px;
+    width: 600px;
+    position: fixed;
+    height: 73px;
+    right: 0;
+    /* background-color: green; */
+    background: #ABC270;
+  }
+
+.social-footer {
+  position: fixed;
+  width: 100%;
+  height: 73px;
+  font-weight: 700;
+  left: 0;
+  bottom: 0;
+/*   background-color: green; */
+  background: #ABC270;
+}
+
+.tips {
+  border: none;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  background-color: white;
+  top: 2500px;
+}
+
+.w3-animate-fading {
+  animation: fading 10s infinite;
+}
+
+.white {
+  background-color: white;
+  color: white;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-grid {
+    display: block;
+  }
+}
+  
+  /* The grid: Four equal columns that float next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container-transfer {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+/* Expanding image text */
+#ExpandedImg {
+    left: 50;
+    width: 400;
+    height: 300;
+ }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  
+  /* The art images */
+  .art-image {
+    /* width: 400px; */
+	width: 100%;
+	/* height: 100%; */
+	padding: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+   
+  }
+  
+  /* The art image container */
+  .art-box {
+	position: absolute;
+	width: 80%;
+	left: 20px;
+  }
+
+
+/* ****************************************************** */
+
+.newsletter {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  left: 200px;
+  width: 470px;
+  height: 250px;
+  top: 2900px;
+  margin: 0px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+         By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+  /* Match form field borders */
+  border: 1px solid #999999;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000000;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+         between the labels and their text fields */
+  margin-left: 0.5em;
+  text-align: center;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#feedback {
+  background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  /* make this element invisible until we are ready for it */
+  display: none;
+}
+
+#msg {
+  text-align: left;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.moveDown {
+  margin-top: 3em;
+}

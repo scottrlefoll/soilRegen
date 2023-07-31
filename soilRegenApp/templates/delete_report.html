@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="content-wrap2">
+  <h2>Delete Field Confirmation</h2>
+  <p>Are you sure you want to delete {{ field.name }} ({{ field.symbol }})?</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Delete">
+  </form>
+</div>
+{% endblock %}

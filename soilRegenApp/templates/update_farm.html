@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="content-wrap">
+    <h2>{{ farm.farm_name }}</h2> 
+    <a href="{% url 'update_farm' farm_id=farm.farm_id %}"><button>Update Farm</button></a>
+    <a href="{% url 'delete_farm' farm_id=farm.farm_id %}"><button>Delete Farm</button></a>
+    <p>Street Address: {{ farm.street_address }}</p>
+    <p>Town: {{ farm.town }}</p>
+    <p>State: {{ farm.state }}</p>
+    <p>Zip: {{ farm.zip }}</p>
+    <p>Description: {{ farm.description }}</p>
+    <br>
+    <div id="farm-detail-table-div">
+        <table class="farm-table">
+            <thead>
+                <tr>
+                    <th>Field Name</th>
+                    <th>Field Size</th>
+                    <th>Crop</th>
+                    <th>Planting Date</th>
+                    <th>Harvest Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for field in farm.field_set.all %}
+                <tr>
+                    <td>{{ field.field_name }}</td>
+                    <td>{{ field.field_size }}</td>
+                    <td>{{ field.crop }}</td>
+                    <td>{{ field.planting_date }}</td>
+                    <td>{{ field.harvest_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

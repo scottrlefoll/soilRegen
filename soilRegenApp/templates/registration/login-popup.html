@@ -1,0 +1,83 @@
+...
+<head>
+  ...
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <style>
+    /* Style the login form */
+    .login-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+    .login-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <title>Soil Regen | Regenerative Farming Expert System | Home.</title>
+  <script>
+    $(document).ready(function() {
+      $("#logout-link").click(function(e) {
+        e.preventDefault();
+        $(".login-form").fadeIn();
+      });
+
+      $(".login-form button").click(function() {
+        // Perform login functionality here
+        // You can use AJAX to send the login data to the server
+        // and handle the response accordingly
+
+        // For now, just hide the login form
+        $(".login-form").fadeOut();
+      });
+    });
+  </script>
+</head>
+<body>
+  ...
+  <div class="navbar1">
+    <nav>
+      {% if user.is_authenticated %}
+        <ul class="navbar1-ul">
+          ...
+          <li><a id="logout-link" class="nav-choice" href="#">Logout</a></li>
+        </ul>
+      {% else %}
+        <ul class="navbar1-ul">
+          ...
+          <li><a class="nav-choice" href="{% url 'login' %}">Login</a></li>
+        </ul>
+      {% endif %}
+    </nav>
+  </div>
+  ...
+  <!-- Login Form -->
+  <div class="login-form">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <button type="button">Login</button>
+  </div>
+</body>
+...

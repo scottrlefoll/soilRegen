@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+
+{% block content %}
+<div id="content-wrap2">
+    <div id="analysis-list-div">
+        <h2>User Dashboard</h2>
+        <a href="{% url 'add_analysis' %}"><button>Add Analysis</button></a>
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <form method="post">
+    {% csrf_token %}
+        <div id="analysis-list-table-div">
+            <table class="analysis-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Analysis Date</th>
+                        <th>Soil Report</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for analysis in analyses %}
+                    <tr>
+                        <td><a href="{% url 'analysis_detail' analysis.analysis_id %}">{{ analysis.description }}</a></td>
+                        <td>{{ analysis.analysis_date|date:"m/d/y" }}</td>
+                        <td>{{ analysis.soil_report }}</td>
+                        <td><a href="{% url 'delete_analysis' analysis.analysis_id %}">Delete</a></td>
+                        <td><a href="{% url 'update_analysis' analysis.analysis_id %}">Update</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,187 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+/* body{background:white;} */
+/* box-shadow: inset 0 0 20vmin 0 #585247; */
+.wrap {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  margin: 0 auto;
+  background: inherit;
+  transform: scale(0.2) translatez(0px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 47.5%;
+  height: 47.5%;
+  overflow: hidden;
+  transform: scale(0.5) translateZ(0px);
+  background: #585247;
+}
+a div {
+  height: 100%;
+  background-size: cover;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  border-radius: inherit;
+}
+a:nth-child(1) {
+  border-radius: 40vmin 0 0 0;
+  transform-origin: 110% 110%;
+  transition: transform 0.4s 0.15s;
+}
+a:nth-child(1) div {
+  /* Farm*/
+  background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/Farm%26Field1.JPG?v=1689818697778");
+  background-position: center;
+  left: 250px;
+  background-size: 150px;
+}
+a:nth-child(2) {
+  border-radius: 0 40vmin 0 0;
+  left: 52.5%;
+  transform-origin: -10% 110%;
+  transition: transform 0.4s 0.2s;
+}
+a:nth-child(2) div {
+  /* Profile */
+/*   background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/Profile1.JPG?v=1689818005303"); */
+  background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/Profile2.JPG?v=1689818458076");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+a:nth-child(3) {
+  border-radius: 0 0 0 40vmin;
+  top: 52.5%;
+  transform-origin: 110% -10%;
+  transition: transform 0.4s 0.25s;
+}
+a:nth-child(3) div {
+  /* Soil Reports */
+  background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/soilReports5.JPG?v=1689816745671"); 
+/*   background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/soilReports6.JPG?v=1689817721422");  */
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+a:nth-child(4) {
+  border-radius: 0 0 40vmin 0;
+  top: 52.5%;
+  left: 52.5%;
+  transform-origin: -10% -10%;
+  transition: transform 0.4s 0.3s;
+}
+a:nth-child(4) div {
+  /* Analysis */
+  background-image: url("https://cdn.glitch.global/b2291c7a-6033-4fc1-9118-983245131cc1/Analysis4.JPG?v=1689817618185");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+a:nth-child(5) {
+  width: 55%;
+  height: 55%;
+  left: 22.5%;
+  top: 22.5%;
+  border-radius: 50vmin;
+  box-shadow: 0 0 0 5vmin #e3dfd2;
+  transform: scale(1);
+}
+a:nth-child(5) div {
+  /* Tips */
+  /* background-image: url('https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg'); */
+  background-image: url("https://cdn.glitch.global/e8e691a9-cfdc-4a46-9df8-27aaf5721037/quick-tips-hint-helpful-tricks-260nw-1263054547.webp?v=1653482173157");
+  background-position: center;
+  background-size: 200px;
+}
+span {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 45vmin;
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 100%;
+  background: #585247;
+  transform: translateZ(0px);
+}
+span span {
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: #aca696;
+  left: 20%;
+  top: 50%;
+  border-radius: 0;
+}
+span span:after,
+span span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1.5vmin;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+}
+span span:after {
+  top: 1.5vmin;
+}
+span:hover + .wrap,
+.wrap:hover {
+  transform: scale(0.8) translateZ(0px);
+  opacity: 1;
+}
+span:hover + .wrap a,
+.wrap:hover a {
+  transform: scale(1) translatez(0px);
+}
+
+a:hover div {
+  opacity: 1;
+  transform: translatez(0px);
+}
+
+
+.tiptitle {
+  /*         text-align: center; */
+  padding-left: 100px;
+  font-size: 20px;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 77;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
